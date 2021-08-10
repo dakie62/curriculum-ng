@@ -1,0 +1,23 @@
+.container {
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    @apply pt-8;
+    @apply pb-8;
+}
+
+ul {
+    @apply pl-4;
+    @apply text-sm;
+}
+
+ul>li {
+    @apply pt-2;
+    @apply pb-1;
+    @apply font-semibold;
+}
+
+.selectedItem {
+    @apply text-blue-400;
+    @apply text-base;
+}

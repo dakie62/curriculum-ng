@@ -1,0 +1,69 @@
+<div class="flex">
+
+    <!-- QuestionMarKS Section -->
+    <div>
+        <div class="w-full">
+            <h1>{{whoAmI}}</h1>
+            <div class="mb-2 textSmaller">
+                <label> Who are you ? </label>
+                <div>
+                    <fa-icon class="text-blue-400" [icon]="icons.chevron_right"></fa-icon>
+                    <span> Hi, my name is Alexis Ebrard. Nice to meet you. </span>
+                    <fa-icon class="text-yellow-500" [icon]="icons.hand_shake"></fa-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full mt-3 mb-3 textSmaller">
+            <label>How old are you ? </label>
+            <div>
+                <fa-icon class="text-blue-400" [icon]="icons.chevron_right"></fa-icon>
+                <span> I'm 27 years old. </span>
+            </div>
+        </div>
+
+        <div class="w-full mt-3 mb-3 textSmaller">
+            <label>Where do you come from ?</label>
+            <div>
+                <fa-icon class="text-blue-400" [icon]="icons.chevron_right"></fa-icon>
+                <span> I'm from France and wish to work with International countries</span>
+            </div>
+        </div>
+
+        <div class="w-full mt-3 mb-3 textSmaller">
+            <label>How long have you been working ? </label>
+            <div>
+                <fa-icon class="text-blue-400" [icon]="icons.chevron_right"></fa-icon>
+                <span> I've got 4 years of developing experiences, on various technologies.
+                </span>
+                <fa-icon class="text-blue-400" [icon]="icons.laptop"></fa-icon>
+            </div>
+        </div>
+
+        <div class="w-full mt-3 mb-3 textSmaller">
+            <label>What did you use in order to create this website ?
+            </label>
+            <div>
+                <fa-icon class="text-blue-400" [icon]="icons.chevron_right"></fa-icon>
+                <span> I worked with Angular, Tailwind and a NodeJs backend + MongoDb database.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <img class="m-auto" src="../assets/me_twin_cat.jpg" width="150" alt="Me and my beloved friend" />
+</div>
+
+
+<!-- Hyperlinks -->
+<div class="mt-2 w-full">
+    <h1>Hyperlinks</h1>
+    <div class="flex m-auto justify-evenly max-w-lg">
+        <div class="hyperlink transform hover:scale-110" *ngFor="let link of hyperlinks" (click)="navigateToHyperlink(link)">
+            <img class="fiftyRadius" [src]="link.image" width="80" />
+            <div class="text-center">
+                <label>{{link.name}}</label>
+            </div>
+        </div>
+    </div>
+</div>
