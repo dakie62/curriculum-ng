@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
   public displayLandingScapePage = false;
 
   ngOnInit() {
-    console.log(window.innerWidth);
     this.displayLandingScapePage = window.innerWidth < +AppComponent.MAX_WIDTH ? true : false;
   }
 
