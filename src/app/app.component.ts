@@ -37,7 +37,6 @@ export class AppComponent implements OnInit {
   }
 
   public scrollToSection(el: HTMLElement, bigTitle: string) {
-
     this.selectedGuidelinePanel = bigTitle;
     el.scrollIntoView({ behavior: 'smooth' });
     this.currentSection = el;
@@ -63,14 +62,15 @@ export class AppComponent implements OnInit {
       return true;
     }
 
+    if (this.currentSection && increment < 0 && allSections.findIndex(el => el === this.currentSection) === 0) {
+      return true;
+    }
+
     if (this.currentSection && increment > 0 && allSections.findIndex(el => el === this.currentSection) === allSections.length - 1) {
       return true;
     }
 
     return false;
   }
-
-
-
 
 }
