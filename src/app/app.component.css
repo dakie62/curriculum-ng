@@ -21,3 +21,8 @@ ul>li {
     @apply text-blue-400;
     @apply text-base;
 }
+
+h1.banner {
+    font-size: 4vw;
+    @apply my-4;
+}

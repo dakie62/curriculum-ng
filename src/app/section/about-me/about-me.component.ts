@@ -19,6 +19,7 @@ export class AboutMeComponent implements OnInit {
     { name: 'Github', webUrl: 'https://github.com/dakie62', image: '../assets/git.svg.png' },
     { name: 'Linkedin', webUrl: 'https://www.linkedin.com/in/alexis-e-673204130/', image: '../assets/linkedin.png' },
     { name: 'Kaleo-IT', webUrl: 'https://www.societe.com/societe/kaleo-it-882321227.html', image: '../assets/infogreffe.png' },
+    { name: 'Facebook', webUrl: 'https://www.facebook.com/alexis.ebrard/', image: '../assets/facebook.png' },
   ];
   
   constructor() { }
