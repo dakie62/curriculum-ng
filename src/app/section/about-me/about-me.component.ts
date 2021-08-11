@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faCat, faChevronRight, faHandshake, faLaptop } from '@fortawesome/free-solid-svg-icons';
+import { faCat, faChevronRight, faHandshake, faLaptop, faLink } from '@fortawesome/free-solid-svg-icons';
+import { icons } from 'src/app/fa-images';
 
 @Component({
   selector: 'app-about-me',
@@ -8,12 +9,8 @@ import { faCat, faChevronRight, faHandshake, faLaptop } from '@fortawesome/free-
 })
 export class AboutMeComponent implements OnInit {
   public whoAmI = "Me, myself and I";
-  public icons = {
-    cat: faCat,
-    chevron_right: faChevronRight,
-    hand_shake: faHandshake,
-    laptop: faLaptop
-  }
+  public icons = icons;
+
 
   public hyperlinks: Hyperlink[] = [
     { name: 'Github', webUrl: 'https://github.com/dakie62', image: '../assets/git.svg.png' },
@@ -21,7 +18,7 @@ export class AboutMeComponent implements OnInit {
     { name: 'Kaleo-IT', webUrl: 'https://www.societe.com/societe/kaleo-it-882321227.html', image: '../assets/infogreffe.png' },
     { name: 'Facebook', webUrl: 'https://www.facebook.com/alexis.ebrard/', image: '../assets/facebook.png' },
   ];
-  
+
   constructor() { }
 
   ngOnInit(): void {

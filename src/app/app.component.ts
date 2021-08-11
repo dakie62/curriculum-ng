@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { icons } from './fa-images';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,10 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   private static MAX_WIDTH = "1100";
+  private currentSection: HTMLElement | undefined;
 
+  public icons = icons;
   public title = 'curriculum';
-
   public bigTitles = {
     curriculum: 'Curriculum Vitae',
     guideline: 'Guideline',
@@ -25,7 +27,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     console.log(window.innerWidth);
-    this.displayLandingScapePage = window.innerWidth < +AppComponent.MAX_WIDTH ? true : false
+    this.displayLandingScapePage = window.innerWidth < +AppComponent.MAX_WIDTH ? true : false;
   }
 
 
@@ -34,9 +36,41 @@ export class AppComponent implements OnInit {
     this.displayLandingScapePage = event.target.innerWidth < AppComponent.MAX_WIDTH ? true : false;
   }
 
-  scrollToSection(el: HTMLElement, bigTitle: string) {
+  public scrollToSection(el: HTMLElement, bigTitle: string) {
+
     this.selectedGuidelinePanel = bigTitle;
     el.scrollIntoView({ behavior: 'smooth' });
+    this.currentSection = el;
   }
+
+
+  public moveToSection(increment: number, allSections: HTMLElement[], titles: string[]) {
+    if (!this.currentSection) {
+      this.scrollToSection(allSections[1], this.bigTitles.experiences);
+      return;
+    }
+    const index = allSections.findIndex(el => el === this.currentSection) + increment;
+    this.scrollToSection(allSections[index], titles[index]);
+
+    if (index === 0) {
+      this.currentSection = undefined;
+    }
+  }
+
+
+  public isMoveToSectionDisabled(increment: number, allSections: HTMLElement[]): boolean {
+    if (!this.currentSection && increment < 0) {
+      return true;
+    }
+
+    if (this.currentSection && increment > 0 && allSections.findIndex(el => el === this.currentSection) === allSections.length - 1) {
+      return true;
+    }
+
+    return false;
+  }
+
+
+
 
 }

@@ -39,19 +39,31 @@
             </div>
 
             <!-- right side bar -->
-            <div class="w-full bg-gray-200 rounded-tr-lg rounded-br-lg flex flex-col">
+            <div class="w-full bg-gray-200 rounded-tr-lg rounded-br-lg flex flex-col opacity-95">
                 <!-- TITLE CONTAINER -->
-                <div class="h-12 flex justify-center items-center border-gray-300 border-b">
+                <div class="relative h-12 flex justify-center items-center border-gray-300 border-b">
+                    <div class="absolute left-0">
+                        <button [disabled]="isMoveToSectionDisabled(-1,[aboutMe,experiences,skills,hobbies])" (click)="moveToSection(-1,[aboutMe,experiences,skills,hobbies], [bigTitles.about_me, bigTitles.experiences, bigTitles.skills, bigTitles.hobbies])">
+                            <fa-icon [icon]="icons.chevron_left"
+                                [class]="isMoveToSectionDisabled(-1,[aboutMe,experiences,skills,hobbies])? 'opacity-50' : 'opacity-100'"
+                                class="pl-5 pr-2"></fa-icon>
+                        </button>
+                        <button [disabled]="isMoveToSectionDisabled(1,[aboutMe,experiences,skills,hobbies])" (click)="moveToSection(1,  [aboutMe,experiences,skills,hobbies], [bigTitles.about_me, bigTitles.experiences, bigTitles.skills, bigTitles.hobbies])">
+                            <fa-icon [icon]="icons.chevron_right"
+                                [class]="isMoveToSectionDisabled(1,[aboutMe,experiences,skills,hobbies])? 'opacity-50' : 'opacity-100'"
+                                class="px-1"></fa-icon>
+                        </button>
+                    </div>
                     <span class="font-semibold text-sm">{{bigTitles.curriculum}}</span>
                 </div>
-                <div class="h-full bg-white overflow-hidden rounded-br-lg">
 
+
+                <!-- BODY -->
+                <div class="h-full bg-white overflow-hidden rounded-br-lg opacity-95">
                     <section #aboutMe>
                         <!-- ABOUT ME SECTION  -->
                         <app-about-me></app-about-me>
-
                     </section>
-
                     <section #experiences>
                         {{bigTitles.experiences}}
                     </section>
@@ -62,6 +74,8 @@
                         {{bigTitles.hobbies}}
                     </section>
                 </div>
+
+
             </div>
         </div>
 
