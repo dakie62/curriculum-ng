@@ -1,5 +1,10 @@
-div.skill>img {
-    @apply px-2;
-    @apply max-h-28;
-    max-width: 300px;
+div.header {
+    @apply w-full;
+}
+
+div.header>img {
+    max-width: 100px;
+    max-height: 100px;
+    clip-path: circle(40%);
+    @apply bg-purple-200;
 }

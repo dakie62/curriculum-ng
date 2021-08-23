@@ -1,6 +1,6 @@
-<div class="flex flex-wrap h-full w-full skill justify-between">
+<!-- <div class="flex flex-wrap h-full w-full skill justify-between">
     <img src="../assets/technologies/sonarqube.svg" />
-    <img src="../assets/technologies/angular.svg" />
+
     <img src="../assets/technologies/oracle.svg" />
     <img src="../assets/technologies/nodeJs.svg" />
     <img src="../assets/technologies/flutter.svg" />
@@ -10,4 +10,69 @@
     <img src="../assets/technologies/spring.svg" />
     <img src="../assets/technologies/tailwind.png" />
     <img src="../assets/technologies/vse.png" />
+</div> -->
+
+<div class="border-r w-1/2 h-4/5 flex flex-col justify-between">
+
+    <div class="flex items-center justify-center">
+        <h1>Top RANK stack </h1>
+        <fa-icon [icon]="icons.trophy" class="text-yellow-400 px-2"></fa-icon>
+    </div>
+
+    <div class="w-full">
+        <div class="flex justify-around items-center header">
+            <img src="../assets/technologies/angular.svg" />
+            <div>
+                <h1 class="text-blue-400 text-center w-full">Angular</h1>
+                <div class="text-center">
+                    <fa-icon class="px-1 text-yellow-400" *ngFor="let star of generateStars(4);" [icon]="icons.star">
+                    </fa-icon>
+                    <fa-icon class="px-1 " *ngFor="let star of generateStars(1);" [icon]="icons.star"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <div class="flex justify-around items-center header">
+            <img src="../assets/technologies/flutter.svg" />
+            <div>
+                <h1 class="text-blue-400 text-center w-full">Flutter</h1>
+                <div class="text-center">
+                    <fa-icon class="px-1 text-yellow-400" *ngFor="let star of generateStars(4);" [icon]="icons.star">
+                    </fa-icon>
+                    <fa-icon class="px-1 " *ngFor="let star of generateStars(1);" [icon]="icons.star"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <div class="flex justify-around items-center header">
+            <img src="../assets/technologies/ngrx.svg" />
+            <div>
+                <h1 class="text-blue-400 text-center w-full">Ngrx</h1>
+                <div class="text-center">
+                    <fa-icon class="px-1 text-yellow-400" *ngFor="let star of generateStars(3);" [icon]="icons.star">
+                    </fa-icon>
+                    <fa-icon class="px-1 " *ngFor="let star of generateStars(2);" [icon]="icons.star"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <div class="flex justify-around items-center header">
+            <img src="../assets/technologies/nodeJs.svg" />
+            <div>
+                <h1 class="text-blue-400 text-center w-full">Node JS</h1>
+                <div class="text-center">
+                    <fa-icon class="px-1 text-yellow-400" *ngFor="let star of generateStars(3);" [icon]="icons.star">
+                    </fa-icon>
+                    <fa-icon class="px-1 " *ngFor="let star of generateStars(2);" [icon]="icons.star"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
