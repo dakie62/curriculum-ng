@@ -10,6 +10,7 @@ export class SkillsComponent implements OnInit {
   constructor() { }
 
   icons = icons;
+  technologies = ["Oracle", "Mongo DB", "MongoCloud", "Spring", "Tailwind", "Sonarqube", "Docker", "Typescript", "Swift", "Junit", "Jacoco", "Selenium", "Karma/Jasmine", "Windows", "Linux", "Intellij", "Visual Studio Code", "Jenkins", "Gitlab", "Gitlab-CI", "Git bash", "HTML5", "CSS3", "Javascript", "JAVA"];
   ngOnInit(): void {
   }
 
@@ -17,9 +18,9 @@ export class SkillsComponent implements OnInit {
 
   public generateStars = (numberOfstars: number) => {
     let res = [];
-    for(let i=0; i<numberOfstars;i++){
+    for (let i = 0; i < numberOfstars; i++) {
       res.push(i);
-    }  
+    }
     return res;
   }
 

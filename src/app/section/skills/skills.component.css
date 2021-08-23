@@ -8,3 +8,12 @@ div.header>img {
     clip-path: circle(40%);
     @apply bg-purple-200;
 }
+
+#sk {
+    @apply px-5;
+    @apply my-3;
+}
+
+#sk>label {
+    @apply text-blue-400;
+}
