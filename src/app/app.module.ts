@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AboutMeComponent } from './section/about-me/about-me.component';
 import { SkillsComponent } from './section/skills/skills.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     AppComponent,
     AboutMeComponent,
     SkillsComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
