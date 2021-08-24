@@ -4,13 +4,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './section/about-me/about-me.component';
 import { SkillsComponent } from './section/skills/skills.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,

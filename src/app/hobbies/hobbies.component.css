@@ -1,0 +1,5 @@
+img {
+    @apply w-28;
+    @apply h-28;
+    @apply m-auto
+}
