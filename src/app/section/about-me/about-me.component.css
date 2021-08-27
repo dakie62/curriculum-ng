@@ -1,0 +1,13 @@
+#bella {
+    @apply flex;
+    @apply ml-auto;
+    @apply w-80;
+    @apply text-sm;
+    @apply justify-between
+}
+
+#bella>div,
+#bella>p {
+    @apply text-left;
+    @apply pr-2
+}

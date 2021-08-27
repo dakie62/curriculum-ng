@@ -7,7 +7,7 @@ export const icons = {
   laptop: faLaptop,
   chevron_left: faChevronLeft,
   star: faStar,
-  trophy: faTrophy, 
+  trophy: faTrophy,
   wallet: faWallet,
-  cameraRetro: faCameraRetro
+  cameraRetro: faCameraRetro,
 }

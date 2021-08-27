@@ -11,7 +11,7 @@ div.header>img {
 
 #sk {
     @apply px-5;
-    @apply my-3;
+    @apply text-sm;
 }
 
 #sk>label {
